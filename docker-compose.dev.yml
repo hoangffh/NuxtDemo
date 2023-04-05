@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  # Add more containers below (nginx, postgres, etc.)
+  database:
+    image: postgres:latest
+    container_name: store
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - ./database:/var/lib/postgresql/data/
+    restart: always
+    ports:
+      - 5432:5432
+# Define a network, which allows containers to communicate
+# with each other, by using their container name as a hostname
+# networks:
+#   my_network:
+#     external: true
