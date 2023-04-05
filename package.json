@@ -5,7 +5,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "docker": "docker-compose -f docker-compose.dev.yml up -d",
+    "push": "npx prisma db push",
+    "open":"npx prisma studio",
+    "migrate": "npx prisma migrate dev --name init"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
@@ -16,7 +20,10 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",
+    "@prisma/client": "^4.11.0",
     "ant-design-vue": "^3.2.15",
-    "unplugin-vue-components": "^0.24.1"
+    "axios": "^1.3.4",
+    "unplugin-vue-components": "^0.24.1",
+    "vue-query": "^1.26.0"
   }
 }
