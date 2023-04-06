@@ -55,9 +55,9 @@
           <a-col>
             <a-form-item label="Gender">
               <a-radio-group v-model:value="formState.gender">
-                <a-radio value="1">Male</a-radio>
-                <a-radio value="2">Female</a-radio>
-                <a-radio value="3">Other</a-radio>
+                <a-radio value="MALE">Male</a-radio>
+                <a-radio value="FEMALE">Female</a-radio>
+                <a-radio value="OTHER">Other</a-radio>
               </a-radio-group>
             </a-form-item>
           </a-col>

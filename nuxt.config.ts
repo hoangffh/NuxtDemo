@@ -6,11 +6,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: ["~/assets/css/main.css"],
-  plugins: ["@/plugins/antd"],
-  runtimeConfig: {
-    public: {
-      baseApiURl: process.env.BASE_API_URl,
-    },
-  },
+  css: ["@/src/assets/css/main.css"],
+  plugins: ["@/src/plugins/antd"],
 });
